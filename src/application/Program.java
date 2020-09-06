@@ -10,6 +10,11 @@ import chess.ChessPosition;
 
 public class Program {
 
+	/**
+	 * 
+	 *  Method responsible for run the main program
+	 *  @param args 
+	 */
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -35,7 +40,6 @@ public class Program {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
-			
 			
 		}
 		
