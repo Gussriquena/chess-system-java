@@ -10,11 +10,6 @@ import chess.ChessPosition;
 
 public class Program {
 
-	/**
-	 * 
-	 *  Method responsible for run the main program
-	 *  @param args 
-	 */
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -32,17 +27,16 @@ public class Program {
 				System.out.print("Target: ");
 				ChessPosition target = UI.readChessPosition(sc);
 				
-				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);	
-			} catch(ChessException e) {
-				System.out.println(e.getMessage());
-				sc.nextLine();
-			} catch(InputMismatchException e) {
+				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
+			}
+			catch (ChessException e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
-			
+			catch (InputMismatchException e) {
+				System.out.println(e.getMessage());
+				sc.nextLine();
+			}
 		}
-		
 	}
-
 }
